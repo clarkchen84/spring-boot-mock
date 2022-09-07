@@ -28,3 +28,21 @@
              1. ` javax.servlet.ReadListener`
           2. `javax.servlet.ServletOutputStream#setWriteLister`
              1. `javax.servlet.WriteListener`
+       3. 实现
+          1. 追加异步支持
+             1. 追加 asyncSupported ,表明支持 异步servlet @WebServlet(urlPatterns = "/my/async-servlet",asyncSupported = true)
+          2. 获取异步上下文
+             1. AsyncContext context = req.startAsync();
+          3. 设置异步线程， 在线程代码中追加逻辑， 并标记完成
+             1. ``` java 
+                context.start(() -> {
+                    try {
+                         resp.getWriter().write("hello world");
+                         context.complete();
+
+                     } catch (IOException e) {
+                         e.printStackTrace();
+                     }
+                });
+                ```
+        
