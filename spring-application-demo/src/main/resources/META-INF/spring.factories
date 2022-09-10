@@ -1,0 +1,13 @@
+# ApplicationContextInitializer 配置
+org.springframework.context.ApplicationContextInitializer=\
+sizhe.chen.context.AfterHelloWorldContextInitializer,\
+sizhe.chen.context.HelloWorldContextInitializer
+
+#ApplicationListener 配置
+org.springframework.context.ApplicationListener=\
+sizhe.chen.listener.AfterHelloWorldApplicationListener,\
+sizhe.chen.listener.HelloWorldApplicationListener
+
+# Listeners Run Listeners 配置
+org.springframework.boot.SpringApplicationRunListener=\
+sizhe.chen.listener.HelloWorldSpringApplicationRunListener

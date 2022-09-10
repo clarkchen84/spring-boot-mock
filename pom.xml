@@ -8,6 +8,7 @@
         <module>servlet-demo</module>
         <module>auto-wired-demo</module>
         <module>spring-application-demo</module>
+        <module>spring-web-mvc-demo</module>
     </modules>
 
     <groupId>sizhe.chen</groupId>
